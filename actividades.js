@@ -76,7 +76,7 @@ router.get("/", async (req, res) => {
     GROUP BY a.id_actividad, a.nombre, u.nombre, a.imagen
     ORDER BY a.nombre, u.nombre;
   `);
-  res.send({ apiactividades });
+  res.json({ actividad: apiactividades[0] });
 });
 
 
