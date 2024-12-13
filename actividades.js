@@ -1,5 +1,5 @@
 import express from "express";
-import { db } from "./db.js";
+import { db } from path.resolve("./db.js");
 
 const router = express.Router();
 
@@ -76,7 +76,7 @@ router.get("/", async (req, res) => {
     GROUP BY a.id_actividad, a.nombre, u.nombre, a.imagen
     ORDER BY a.nombre, u.nombre;
   `);
-  res.json({ actividad: apiactividades[0] });
+  res.send({ apiactividades });
 });
 
 

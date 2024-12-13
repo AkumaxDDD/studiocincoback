@@ -39,7 +39,7 @@ app.get("/", async (req, res) => {
     GROUP BY a.id_actividad, a.nombre, u.nombre, a.imagen
     ORDER BY a.nombre, u.nombre;
   `);
-  res.json({ actividad: apiactividades[0] });
+  res.send({ apiactividades });
 });
 app.use("/api/actividades", actividadesRouter);
 
