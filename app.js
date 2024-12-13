@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { conectarDB } from "./db.js";
 import actividadesRouter from "./actividades.js";
+import { db } from "./db.js";
 // Conectar a DB
 conectarDB();
 console.log("Conectado a base de datos");
