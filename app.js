@@ -13,7 +13,9 @@ const port = 3000;
 app.use(express.json());
 
 // Habilito cors
-app.use(cors());
+app.use(cors({
+  origin: 'https://dashboard.render.com/', // o '*' para permitir todas las fuentes
+}));
 
 app.get("/", (req, res) => {
   res.send("Hola mundo!");
