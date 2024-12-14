@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Hola mundo!");
 });
 
-app.use("/api/actividades/", actividadesRouter);
+app.use("/api/actividades", actividadesRouter);
 
 app.listen(port, () => {
   console.log(`La aplicacion esta funcionando en: ${port}`);
