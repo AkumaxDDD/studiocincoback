@@ -7,7 +7,7 @@ conectarDB();
 console.log("Conectado a base de datos");
 
 const app = express();
-const port = 3000;
+const port = 37289;
 
 // interpretar JSON en body
 app.use(express.json());
