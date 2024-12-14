@@ -6,7 +6,7 @@ const router = express.Router();
 // GET /actividades
 // Consultar por todas las actividades
 router.get("/", async (req, res) => {
-  const [apiactividades] = await db.query(`
+  const [apiactividades] = await db.execute(`
     SELECT * FROM actividades;
   `);
   res.send({ apiactividades });
