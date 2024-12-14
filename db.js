@@ -1,12 +1,12 @@
-import mysql from "mysql2/promise";
+import { createPool } from "mysql2/promise";
 
-export let db;
 
-export async function conectarDB() {
-  db = await mysql.createPool({
+  export const pool =  createPool({
     host: process.env.MYSQLHOST,
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD,
-    database: process.env.MYSQLDATABASE
+    database: process.env.MYSQLDATABASE,
+    port : 37289,
   });
-}
+  
+
