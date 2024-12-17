@@ -6,7 +6,7 @@ import { createPool } from "mysql2/promise";
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD,
     database: process.env.MYSQLDATABASE,
-    port : 49302,
+    port : 40668,
   });
   
 
